@@ -2,12 +2,24 @@
 
 
 #include "EnemyCharacterBase.h"
+#include "EnemyAttributeSet.h"
+#include "AbilitySystemComponent.h"
+
 
 // Sets default values
 AEnemyCharacterBase::AEnemyCharacterBase()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	AbilitySystemComponent =
+		CreateDefaultSubobject<UAbilitySystemComponent>(
+			TEXT("AbilitySystemComponent"));
+
+	AbilitySystemComponent->SetIsReplicated(true);
+
+	AttributeSet =
+		CreateDefaultSubobject<UEnemyAttributeSet>(
+			TEXT("AttributeSet"));
 
 }
 
@@ -30,5 +42,25 @@ void AEnemyCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInput
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+UAbilitySystemComponent* AEnemyCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
+UEnemyAttributeSet* AEnemyCharacterBase::GetAttributeSet() const
+{
+	return AttributeSet;
+}
+
+float AEnemyCharacterBase::GetCurrentStamina() const
+{
+	if (!AttributeSet)
+	{
+		return 0.f;
+	}
+	
+	return AttributeSet->GetStamina();
 }
 
