@@ -10,12 +10,15 @@ struct FCombatProfile
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MinCombatRange = 150.f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float IdealCombatRange = 250.f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MaxCombatRange = 400.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float RecoveryDuration = 2.0f;
 };
