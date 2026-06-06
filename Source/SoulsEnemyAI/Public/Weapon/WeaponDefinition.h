@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "WeaponAbilityEntry.h"
 #include "Engine/DataAsset.h"
 #include "Weapon/WeaponType.h"
 #include "AI/Struct/CombatProfile.h"
@@ -24,5 +25,5 @@ public:
 	FCombatProfile CombatProfile;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	TArray<TSubclassOf<class UGameplayAbility>> AbilitySet;
+	TArray<FWeaponAbilityEntry> AbilityEntries;
 };
