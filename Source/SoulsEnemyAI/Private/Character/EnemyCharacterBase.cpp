@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "EnemyCharacterBase.h"
-#include "EnemyAttributeSet.h"
+#include "Character/EnemyCharacterBase.h"
 #include "AbilitySystemComponent.h"
+#include "AI/Attribute/EnemyAttributeSet.h"
 
 
 // Sets default values
@@ -12,8 +12,8 @@ AEnemyCharacterBase::AEnemyCharacterBase()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	AbilitySystemComponent =
-		CreateDefaultSubobject<UAbilitySystemComponent>(
-			TEXT("AbilitySystemComponent"));
+		CreateDefaultSubobject<UAbilitySystemComponent>
+		(TEXT("AbilitySystemComponent"));
 
 	AbilitySystemComponent->SetIsReplicated(true);
 
