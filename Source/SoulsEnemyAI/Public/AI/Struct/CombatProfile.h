@@ -21,4 +21,7 @@ struct FCombatProfile
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float RecoveryDuration = 2.0f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float StaggeredDuration = 2.0f;
 };
