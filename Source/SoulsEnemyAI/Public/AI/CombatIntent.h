@@ -7,9 +7,7 @@
 UENUM(BlueprintType)
 enum class ECombatIntent : uint8
 {
-	CloseRangeAttack UMETA(DisplayName="Light Attack"),
-	HeavyAttack UMETA(DisplayName="Heavy Attack"),
-	GapCloser UMETA(DisplayName="Gap Closer"),
-	Punish UMETA(DisplayName="Punish"),
-	Retreat UMETA(DisplayName="Retreat")
+	PrimaryAttack UMETA(DisplayName="Primary Attack"),
+	SecondaryAttack UMETA(DisplayName="Secondary Attack"),
+	SpecialAttack UMETA(DisplayName="Special Attack"),
 };

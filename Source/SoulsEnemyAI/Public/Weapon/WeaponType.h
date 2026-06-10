@@ -3,13 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "WeaponType.generated.h" // This must match the filename
+#include "WeaponType.generated.h"
 
 UENUM(BlueprintType)
 enum class EWeaponType : uint8
 {
 	Greatsword,
-	Spear,
-	Hammer,
-	DualBlade
+	Bow,
+	MagicStaff
 };
