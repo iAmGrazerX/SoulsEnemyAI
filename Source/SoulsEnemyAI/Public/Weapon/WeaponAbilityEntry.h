@@ -17,4 +17,13 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	TSubclassOf<UGameplayAbility> AbilityClass;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Weight = 1.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float PreferredRange = 0.f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float StaminaCost = 0.f;
 };
