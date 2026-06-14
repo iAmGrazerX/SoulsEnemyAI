@@ -23,6 +23,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float PreferredRange = 0.f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float ToleranceRange = 0.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float StaminaCost = 0.f;
